@@ -1,4 +1,8 @@
 defmodule LearningElixir.Admin do
+  @moduledoc """
+    Admin Module
+  """
+
   use Ecto.Schema
   import Ecto.Changeset
 
