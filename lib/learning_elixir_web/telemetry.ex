@@ -1,4 +1,7 @@
 defmodule LearningElixirWeb.Telemetry do
+  @moduledoc """
+    Telemetry poller will execute the given period measurements
+  """
   use Supervisor
   import Telemetry.Metrics
 
