@@ -28,11 +28,13 @@ defmodule LearningElixirWeb.ChannelCase do
     end
   end
 
+  alias Ecto.Adapters.SQL.Sandbox
+
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(LearningElixir.Repo)
+    :ok = Sandbox.checkout(LearningElixir.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(LearningElixir.Repo, {:shared, self()})
+      Sandbox.mode(LearningElixir.Repo, {:shared, self()})
     end
 
     :ok
