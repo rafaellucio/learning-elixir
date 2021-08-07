@@ -9,6 +9,5 @@ defmodule LearningElixir.Repo.Migrations.CreateAdministrators do
 
       timestamps()
     end
-
   end
 end
